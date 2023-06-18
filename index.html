@@ -49,7 +49,11 @@
 
 
   <script>
-    const board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-5, 10, 7, -6], axis: true, showCopyright : false });
+    const board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-5, 10, 7, -6], axis: true, showCopyright : false, pan: {
+  enabled: true   // Allow panning
+  needTwoFingers: true, // panning is done with two fingers on touch devices
+  needShift: true, // mouse panning needs pressing of the shift key
+} });
 
     let p = [];
 
